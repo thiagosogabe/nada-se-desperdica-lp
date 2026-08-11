@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== META PIXEL — cole o código oficial do Gerenciador de Eventos aqui, substituindo SEU_PIXEL_ID ===== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+<!-- ===== FIM DO BLOCO DO PIXEL ===== -->
+
+<title>Nada se Desperdiça — Aproveite Cada Alimento da Sua Cozinha</title>
+<meta name="description" content="Fichas visuais que ensinam a aproveitar cascas, talos e sobras da sua cozinha e economizar todo mês. Material 100% digital, acesso imediato.">
+<link rel="canonical" href="https://nutriprotocol.app/nadasedesperdica">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NutriProtocol">
+<meta property="og:url" content="https://nutriprotocol.app/nadasedesperdica">
+<meta property="og:title" content="Nada se Desperdiça — Aproveite Cada Alimento da Sua Cozinha">
+<meta property="og:description" content="Fichas visuais que ensinam a aproveitar cascas, talos e sobras da sua cozinha e economizar todo mês. Material 100% digital, acesso imediato.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nada se Desperdiça — Aproveite Cada Alimento da Sua Cozinha">
+<meta name="twitter:description" content="Fichas visuais que ensinam a aproveitar cascas, talos e sobras da sua cozinha e economizar todo mês.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Caveat:wght@500;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3E8D3;
+    --paper-dark:#EADCC0;
+    --pine:#2F3E2A;
+    --pine-soft:#3E4F37;
+    --mustard:#D8A438;
+    --mustard-dark:#B8842A;
+    --tomato:#B8412B;
+    --tomato-dark:#9A3521;
+    --green:#3C8A4C;
+    --green-dark:#2C6B39;
+    --sage:#7C9070;
+    --ink:#4A3B2A;
+    --cream-white:#FBF6EA;
+    --line:rgba(74,59,42,0.18);
+    --shadow-soft: 0 10px 30px rgba(47,62,42,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Karla', sans-serif;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(74,59,42,0.055) 1px, transparent 0);
+    background-size: 22px 22px;
+    pointer-events:none;
+    z-index:0;
+  }
+  h1,h2,h3{ font-family:'Fraunces', serif; color:var(--pine); line-height:1.08; }
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color: var(--tomato);
+    font-weight:700;
+    display:inline-block;
+    transform: rotate(-2deg);
+  }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+  a{ text-decoration:none; color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  .gingham{
+    height:14px;
+    background-image:
+      linear-gradient(90deg, rgba(184,65,43,0.35) 50%, transparent 50%),
+      linear-gradient(rgba(184,65,43,0.35) 50%, transparent 50%);
+    background-size: 28px 28px;
+    background-color: var(--cream-white);
+  }
+
+  /* ---------- HEADER ---------- */
+  header.top{
+    background: var(--pine);
+    padding: 14px 0;
+    position: sticky; top:0; z-index:50;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  header.top .wrap{ display:flex; align-items:center; justify-content:space-between; }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{
+    width:34px; height:34px; border-radius:50%;
+    background: var(--mustard);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem;
+  }
+  .brand-name{ color:var(--cream-white); font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; }
+  .header-cta{
+    background: var(--tomato);
+    color: var(--cream-white);
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-weight:700;
+    font-size:0.9rem;
+    box-shadow: 0 4px 0 var(--tomato-dark);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding: 64px 0 40px; position:relative; }
+  .hero-grid{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items:center; }
+  .hero h1{ font-size: clamp(2rem, 3.6vw, 2.9rem); margin: 10px 0 18px; font-weight:600; }
+  .hero h1 em{ font-style:italic; color:var(--tomato); }
+  .hero p.lead{ font-size:1.12rem; color: var(--pine-soft); max-width: 480px; margin-bottom: 30px; }
+
+  .btn-primary{
+    display:inline-block;
+    background: var(--green);
+    color: var(--cream-white);
+    font-weight:700;
+    font-size:1.05rem;
+    padding: 17px 32px;
+    border-radius: 12px;
+    box-shadow: 0 6px 0 var(--green-dark);
+    transition: transform 0.12s ease;
+  }
+  .btn-primary:hover{ transform: translateY(2px); box-shadow: 0 4px 0 var(--green-dark); }
+  .btn-primary .sub{ display:block; font-size:0.72rem; font-weight:500; opacity:0.9; margin-top:2px; font-family:'Karla',sans-serif;}
+  .cta-center{ text-align:center; margin-top: 40px; }
+
+  .hero-photo-stack{ position:relative; height: 430px; }
+  .photo-card{
+    position:absolute; border-radius: 10px; overflow:hidden;
+    box-shadow: var(--shadow-soft); border: 6px solid var(--cream-white);
+    background: var(--paper-dark);
+  }
+  .photo-1{ width:64%; top:0; left:10%; z-index:2; transform: rotate(-3deg); }
+  .photo-2{ width:46%; bottom:0; right:0; z-index:3; transform: rotate(5deg); }
+  .photo-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .tape{
+    position:absolute; width:90px; height:28px;
+    background: rgba(216,164,56,0.55);
+    top:-10px; left: calc(10% + 40px);
+    transform: rotate(-8deg); z-index:4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .section{ padding: 70px 0; position:relative; }
+  .section-title{ text-align:center; font-size: clamp(1.6rem, 2.8vw, 2.2rem); max-width: 700px; margin: 6px auto 44px; }
+  .section-head{ text-align:center; margin-bottom: 10px; }
+
+  .pain-list{ display:grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .pain-card{ background: var(--cream-white); border-radius: 14px; padding: 26px 22px; box-shadow: var(--shadow-soft); border-top: 5px solid var(--tomato); }
+  .pain-card .icon{ font-size:1.8rem; margin-bottom:10px; display:block; }
+  .pain-card h3{ font-size:1.05rem; margin-bottom:8px; color:var(--pine); }
+  .pain-card p{ font-size:0.92rem; color: var(--ink); opacity:0.85; }
+
+  .stat-bar{
+    margin-top: 46px; background: var(--pine); color: var(--cream-white);
+    border-radius: 16px; padding: 30px 36px; display:flex; justify-content:space-between;
+    align-items:center; gap: 20px; flex-wrap:wrap;
+  }
+  .stat-bar .num{ font-family:'Fraunces',serif; font-size:2.3rem; color: var(--mustard); font-weight:700; }
+  .stat-bar .stat{ text-align:center; }
+  .stat-bar .stat span.label{ display:block; font-size:0.85rem; opacity:0.85; max-width:180px; margin:4px auto 0; }
+
+  /* ---------- SOLUÇÃO / MOCKUP ---------- */
+  .solution{ background: var(--paper-dark); }
+  .sol-grid{ display:grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; align-items:center; }
+  .index-card{
+    background: var(--cream-white); border-radius: 4px; padding: 28px 26px 32px;
+    box-shadow: var(--shadow-soft); position:relative; transform: rotate(-1.5deg); border: 1px solid var(--line);
+  }
+  .index-card::before{
+    content:""; position:absolute; top:-16px; left: 32px; width:100px; height:26px;
+    background: rgba(124,144,112,0.55); transform: rotate(-4deg);
+  }
+  .index-card .card-eyebrow{ font-family:'Caveat',cursive; color:var(--tomato); font-size:1.3rem; font-weight:700; }
+  .index-card h4{ font-family:'Fraunces',serif; color:var(--pine); font-size:1.3rem; margin: 4px 0 14px; }
+  .card-photo-row{ display:flex; gap:10px; margin-bottom:14px; }
+  .card-photo-row .ph{ border-radius:8px; height:90px; width: 33.33%; border: 2px solid var(--paper); overflow:hidden; background:var(--paper); }
+  .card-photo-row img{ width:100%; height:100%; object-fit:cover; }
+  .card-line{ display:flex; gap:10px; align-items:flex-start; margin-bottom:9px; font-size:0.9rem; }
+  .card-line .bullet{ color: var(--sage); font-size:1.1rem; line-height:1; margin-top:2px; }
+  .card-badge{ margin-top:16px; display:inline-block; background: var(--mustard); color: var(--pine); font-weight:700; font-size:0.8rem; padding: 6px 14px; border-radius: 20px; }
+
+  .sol-copy h2{ font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom:16px; }
+  .sol-copy p{ margin-bottom: 16px; color: var(--pine-soft); font-size:1.02rem; }
+  .check-list{ list-style:none; margin: 18px 0 30px; }
+  .check-list li{ display:flex; gap:10px; margin-bottom:10px; font-size:0.98rem; }
+  .check-list li::before{ content:"✓"; color: var(--tomato); font-weight:700; font-size:1.1rem; }
+
+  /* ---------- CONTEÚDO ---------- */
+  .modules{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .module-card{ background: var(--cream-white); border-radius: 12px; overflow:hidden; box-shadow: var(--shadow-soft); }
+  .module-card .ph{ height: 130px; width:100%; background:var(--paper-dark); overflow:hidden; }
+  .module-card img{ width:100%; height:100%; object-fit:cover; }
+  .module-card .mc-body{ padding: 16px 16px 20px; }
+  .module-card .mc-num{ font-family:'Caveat',cursive; color: var(--tomato); font-size:1.2rem; font-weight:700; }
+  .module-card h4{ font-family:'Fraunces',serif; color:var(--pine); font-size:1.02rem; margin-top:2px; }
+
+  /* ---------- DEPOIMENTOS (CARROSSEL) ---------- */
+  .testi-viewport{
+    overflow:hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .testi-track{
+    display:flex;
+    gap: 20px;
+    width: max-content;
+    animation: testi-scroll 42s linear infinite;
+  }
+  .testi-viewport:hover .testi-track{ animation-play-state: paused; }
+  @keyframes testi-scroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+  .testi-card{
+    background: var(--cream-white); border-radius: 12px; padding: 22px;
+    box-shadow: var(--shadow-soft); width: 300px; flex: 0 0 auto;
+  }
+  .testi-card .stars{ color: var(--mustard-dark); margin-bottom:10px; letter-spacing:2px; }
+  .testi-card p{ font-size:0.93rem; color: var(--ink); margin-bottom:14px; font-style:italic; }
+  .testi-name{ display:flex; align-items:center; gap:10px; }
+  .testi-avatar{ width:38px; height:38px; border-radius:50%; background: var(--sage); color:white; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; flex-shrink:0; }
+  .testi-name span{ font-size:0.85rem; font-weight:700; color: var(--pine); }
+
+  @media (prefers-reduced-motion: reduce){
+    .testi-track{ animation: none; overflow-x:auto; }
+  }
+
+  /* ---------- OFERTA (ÚNICO LUGAR COM PREÇO) ---------- */
+  .offer{ background: var(--paper-dark); }
+  .offer-box{
+    max-width: 560px; margin: 0 auto; background: var(--cream-white); border-radius: 20px;
+    box-shadow: var(--shadow-soft); padding: 44px 40px 36px; text-align:center; border: 2px solid var(--mustard);
+  }
+  .offer-box .badge{ background: var(--tomato); color:white; font-weight:700; font-size:0.8rem; padding: 6px 16px; border-radius: 20px; display:inline-block; margin-bottom:18px; }
+  .offer-box h2{ font-size:1.5rem; margin-bottom: 6px; }
+  .offer-box .offer-sub{ font-size:0.95rem; color:var(--pine-soft); margin-bottom: 26px; }
+  .price-new{ font-family:'Fraunces',serif; font-size:2.8rem; color: var(--tomato); font-weight:700; }
+  .price-note{ font-size:0.82rem; opacity:0.65; margin: 4px 0 26px; }
+  .guarantee{ display:flex; align-items:center; justify-content:center; gap:10px; margin-top:20px; font-size:0.85rem; opacity:0.75;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{ background: var(--cream-white); border-radius: 10px; padding: 18px 22px; margin-bottom: 12px; box-shadow: 0 3px 10px rgba(47,62,42,0.06); }
+  .faq-item summary{ cursor:pointer; font-weight:700; color:var(--pine); font-size:0.98rem; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{ content:"+"; font-size:1.4rem; color: var(--tomato); }
+  .faq-item[open] summary::after{ content:"–"; }
+  .faq-item p{ margin-top:12px; font-size:0.9rem; opacity:0.85; }
+
+  /* ---------- SELOS DE SEGURANÇA / CONFIANÇA ---------- */
+  .trust-section{ background: var(--pine); padding: 54px 0 60px; }
+  .trust-section .section-head .eyebrow{ color: var(--mustard); }
+  .trust-section .section-title{ color: var(--cream-white); }
+  .trust-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 34px;
+  }
+  .trust-badge{
+    background: rgba(251,246,234,0.06);
+    border: 1.5px solid rgba(251,246,234,0.18);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align:center;
+  }
+  .trust-badge .t-icon{ font-size:1.9rem; display:block; margin-bottom:10px; }
+  .trust-badge h4{ color: var(--cream-white); font-family:'Fraunces',serif; font-size:1rem; margin-bottom:6px; }
+  .trust-badge p{ color: var(--cream-white); opacity:0.75; font-size:0.82rem; }
+  .trust-guarantee{
+    max-width: 640px; margin: 0 auto;
+    background: var(--mustard);
+    color: var(--pine);
+    border-radius: 16px;
+    padding: 26px 30px;
+    display:flex; align-items:center; gap:18px;
+    text-align:left;
+  }
+  .trust-guarantee .g-icon{ font-size:2.4rem; flex-shrink:0; }
+  .trust-guarantee h4{ font-family:'Fraunces',serif; font-size:1.1rem; margin-bottom:4px; }
+  .trust-guarantee p{ font-size:0.88rem; opacity:0.9; }
+  .trust-pay{
+    display:flex; justify-content:center; gap:14px; flex-wrap:wrap;
+    margin-top: 30px;
+  }
+  .trust-pay span{
+    background: rgba(251,246,234,0.08);
+    color: var(--cream-white);
+    border: 1px solid rgba(251,246,234,0.18);
+    border-radius: 20px;
+    padding: 7px 16px;
+    font-size:0.8rem;
+    font-weight:600;
+  }
+  @media (max-width: 900px){
+    .trust-grid{ grid-template-columns: repeat(2,1fr); }
+    .trust-guarantee{ flex-direction:column; text-align:center; }
+  }
+  @media (max-width: 560px){
+    .trust-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- RODAPÉ (apenas texto legal + botão) ---------- */
+  .legal-strip{ padding: 36px 0 50px; text-align:center; }
+  .legal-strip p{ font-size:0.76rem; opacity:0.6; max-width:640px; margin: 10px auto 0; color: var(--ink); }
+
+  @media (max-width: 900px){
+    .hero-grid, .sol-grid{ grid-template-columns: 1fr; }
+    .hero-photo-stack{ height: 320px; margin-top: 20px; }
+    .pain-list, .modules{ grid-template-columns: repeat(2,1fr); }
+    .stat-bar{ flex-direction:column; }
+    .section{ padding: 56px 0; }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding: 0 18px; }
+    .pain-list, .modules{ grid-template-columns: 1fr; }
+    .offer-box{ padding: 32px 22px; }
+    .testi-card{ width: 240px; }
+    .section{ padding: 44px 0; }
+    .hero{ padding: 40px 0 28px; }
+    .hero-photo-stack{ height: 250px; }
+    .hero-photo-stack .tape{ display:none; }
+    .brand-name{ font-size:0.92rem; }
+    .header-cta{ padding: 8px 14px; font-size:0.82rem; }
+    .btn-primary{ width:100%; text-align:center; padding: 16px 20px; }
+    .index-card{ padding: 22px 18px 26px; }
+    .card-photo-row .ph{ height: 72px; }
+    .trust-pay{ gap:10px; }
+    .trust-pay span{ font-size:0.74rem; padding:6px 12px; }
+  }
+  @media (max-width: 380px){
+    .hero h1{ font-size: 1.7rem; }
+    .stat-bar .num{ font-size:1.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark">🍅</div>
+      <span class="brand-name">Nada se Desperdiça</span>
+    </div>
+    <a href="#oferta" class="header-cta">Ver oferta</a>
+  </div>
+</header>
+
+<div class="gingham"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">psst... você também joga isso fora?</span>
+      <h1>Nada se Desperdiça: transforme cascas, talos e sobras em <em>economia real</em> na sua cozinha</h1>
+      <p class="lead">Um material visual e fácil de seguir, com fotos reais de cada alimento, mostrando exatamente o que você pode aproveitar em vez de jogar fora — sem complicação, sem receita difícil.</p>
+    </div>
+    <div class="hero-photo-stack">
+      <div class="tape"></div>
+      <div class="photo-card photo-1">
+        <img src="https://loremflickr.com/700/500/vegetables,kitchen?lock=21" alt="Vegetais frescos sobre uma tábua de madeira na cozinha">
+      </div>
+      <div class="photo-card photo-2">
+        <img src="https://loremflickr.com/500/400/vegetable,scraps?lock=22" alt="Cascas e talos de vegetais reaproveitados">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="section" id="dor">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">seja sincera com você mesma</span></div>
+    <h2 class="section-title">Se você se identifica com algo aqui, isso foi feito pra você</h2>
+
+    <div class="pain-list">
+      <div class="pain-card">
+        <span class="icon">🥬</span>
+        <h3>A verdura estraga antes de você usar</h3>
+        <p>Você compra fresquinha, guarda com carinho, e três dias depois já está murcha ou mofada na geladeira.</p>
+      </div>
+      <div class="pain-card">
+        <span class="icon">🗑️</span>
+        <h3>O lixo da cozinha está sempre cheio</h3>
+        <p>Cascas, talos, sementes, sobras do almoço — tudo vai direto pro lixo porque "não tem mais serventia".</p>
+      </div>
+      <div class="pain-card">
+        <span class="icon">🛒</span>
+        <h3>A conta do mercado só aumenta</h3>
+        <p>Mesmo comprando o básico, o dinheiro nunca é suficiente até o fim do mês — e você não sabe onde está o vazamento.</p>
+      </div>
+      <div class="pain-card">
+        <span class="icon">🍲</span>
+        <h3>Você não sabe o que fazer com as sobras</h3>
+        <p>Sobrou arroz, sobrou legume cozido, sobrou pão — e no fim vira sempre a mesma coisa: vai pro lixo por falta de ideia.</p>
+      </div>
+      <div class="pain-card">
+        <span class="icon">📦</span>
+        <h3>Compra demais e não usa tudo a tempo</h3>
+        <p>Você enche o carrinho com boas intenções, mas metade fica esquecida na geladeira até estragar.</p>
+      </div>
+      <div class="pain-card">
+        <span class="icon">😔</span>
+        <h3>Sente que está desperdiçando sem perceber</h3>
+        <p>No fundo você sabe que dá pra aproveitar mais, mas ninguém nunca te mostrou como, na prática, no dia a dia.</p>
+      </div>
+    </div>
+
+    <div class="stat-bar">
+      <div class="stat"><div class="num">30%</div><span class="label">de tudo que uma família compra no mercado acaba no lixo sem ser aproveitado</span></div>
+      <div class="stat"><div class="num">+R$100</div><span class="label">é o quanto uma casa pode economizar por mês só evitando desperdício</span></div>
+      <div class="stat"><div class="num">5 min</div><span class="label">é o tempo médio para aprender cada dica — sem complicação</span></div>
+    </div>
+
+    <div class="cta-center">
+      <a href="#oferta" class="btn-primary">Quero parar de jogar alimentos fora</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA / MOCKUP -->
+<section class="section solution" id="produto">
+  <div class="wrap sol-grid">
+    <div class="index-card">
+      <span class="card-eyebrow">Ficha #04</span>
+      <h4>🧅 Cebola</h4>
+      <div class="card-photo-row">
+        <div class="ph"><img src="https://loremflickr.com/200/150/onion?lock=31" alt="Cebola inteira"></div>
+        <div class="ph"><img src="https://loremflickr.com/200/150/onion,skin?lock=32" alt="Casca de cebola"></div>
+        <div class="ph"><img src="https://loremflickr.com/200/150/soup,broth?lock=33" alt="Caldo caseiro pronto"></div>
+      </div>
+      <div class="card-line"><span class="bullet">●</span> Você joga fora: a casca externa e a raiz</div>
+      <div class="card-line"><span class="bullet">●</span> Novo uso: a casca vira caldo caseiro saboroso</div>
+      <div class="card-line"><span class="bullet">●</span> Novo uso: a raiz replantada em copo com água rende cebolinha fresca</div>
+      <span class="card-badge">💰 Economia estimada: R$12/mês</span>
+    </div>
+
+    <div class="sol-copy">
+      <span class="eyebrow">como funciona na prática</span>
+      <h2>Não é um material pra você "estudar". É um caderno de consulta rápida.</h2>
+      <p>Cada alimento tem a sua própria ficha, exatamente como a que você está vendo ao lado. Sem texto corrido, sem enrolação — você abre no celular, olha a imagem, entende em segundos.</p>
+      <ul class="check-list">
+        <li>Fichas ilustradas para cada alimento, com fotos reais</li>
+        <li>Selo de economia estimada em cada página</li>
+        <li>Formato PDF: abre em qualquer celular, sem instalar nada</li>
+        <li>Planejador semanal de aproveitamento incluso</li>
+      </ul>
+      <a href="#oferta" class="btn-primary">Quero economizar</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section class="section" id="conteudo">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">o que tem dentro</span></div>
+    <h2 class="section-title">Alimentos que você já compra toda semana — e agora vai aproveitar 100%</h2>
+    <div class="modules">
+      <div class="module-card">
+        <div class="ph"><img src="https://loremflickr.com/400/260/vegetables?lock=41" alt="Legumes variados"></div>
+        <div class="mc-body"><span class="mc-num">01</span><h4>Vegetais e legumes do dia a dia</h4></div>
+      </div>
+      <div class="module-card">
+        <div class="ph"><img src="https://loremflickr.com/400/260/fruit?lock=42" alt="Frutas frescas"></div>
+        <div class="mc-body"><span class="mc-num">02</span><h4>Frutas e suas cascas</h4></div>
+      </div>
+      <div class="module-card">
+        <div class="ph"><img src="https://loremflickr.com/400/260/bread,grains?lock=43" alt="Pão e grãos"></div>
+        <div class="mc-body"><span class="mc-num">03</span><h4>Pães, arroz e grãos que sobram</h4></div>
+      </div>
+      <div class="module-card">
+        <div class="ph"><img src="https://loremflickr.com/400/260/herbs?lock=44" alt="Ervas e temperos"></div>
+        <div class="mc-body"><span class="mc-num">04</span><h4>Ervas, talos e temperos</h4></div>
+      </div>
+    </div>
+    <div class="cta-center">
+      <a href="#oferta" class="btn-primary">Quero parar de gastar</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS — CARROSSEL AUTOMÁTICO -->
+<section class="section" id="depoimentos">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">quem já economiza assim</span></div>
+    <h2 class="section-title">Mulheres como você, na cozinha de casa</h2>
+  </div>
+
+  <div class="testi-viewport">
+    <div class="testi-track">
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Nunca mais joguei talo de brócolis fora. Uso até casca de banana agora, quem diria."</p><div class="testi-name"><div class="testi-avatar">M</div><span>Marisa, 52 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"É bem simples de entender, tem foto de tudo. Achei que ia ser difícil e não é nada disso."</p><div class="testi-name"><div class="testi-avatar">L</div><span>Luzia, 58 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Já dá pra ver diferença na feira do mês. Indiquei pra minha filha também."</p><div class="testi-name"><div class="testi-avatar">S</div><span>Sônia, 61 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Comprei por curiosidade e virou hábito lá em casa. Genial demais."</p><div class="testi-name"><div class="testi-avatar">C</div><span>Cláudia, 47 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Uso as fichas toda vez que vou fazer a feira, ajuda demais na hora de comprar certo."</p><div class="testi-name"><div class="testi-avatar">R</div><span>Rosa, 63 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Ensinei minhas duas filhas com o material, ficou fácil até de explicar pra elas."</p><div class="testi-name"><div class="testi-avatar">B</div><span>Beatriz, 55 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Reduzi o lixo de casa e ainda sobrou dinheiro no fim do mês. Recomendo."</p><div class="testi-name"><div class="testi-avatar">N</div><span>Neusa, 60 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Simples e direto, sem enrolação. Foi o que mais gostei."</p><div class="testi-name"><div class="testi-avatar">T</div><span>Terezinha, 49 anos</span></div></div>
+      <!-- duplicado para loop contínuo -->
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Nunca mais joguei talo de brócolis fora. Uso até casca de banana agora, quem diria."</p><div class="testi-name"><div class="testi-avatar">M</div><span>Marisa, 52 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"É bem simples de entender, tem foto de tudo. Achei que ia ser difícil e não é nada disso."</p><div class="testi-name"><div class="testi-avatar">L</div><span>Luzia, 58 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Já dá pra ver diferença na feira do mês. Indiquei pra minha filha também."</p><div class="testi-name"><div class="testi-avatar">S</div><span>Sônia, 61 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Comprei por curiosidade e virou hábito lá em casa. Genial demais."</p><div class="testi-name"><div class="testi-avatar">C</div><span>Cláudia, 47 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Uso as fichas toda vez que vou fazer a feira, ajuda demais na hora de comprar certo."</p><div class="testi-name"><div class="testi-avatar">R</div><span>Rosa, 63 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Ensinei minhas duas filhas com o material, ficou fácil até de explicar pra elas."</p><div class="testi-name"><div class="testi-avatar">B</div><span>Beatriz, 55 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Reduzi o lixo de casa e ainda sobrou dinheiro no fim do mês. Recomendo."</p><div class="testi-name"><div class="testi-avatar">N</div><span>Neusa, 60 anos</span></div></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>"Simples e direto, sem enrolação. Foi o que mais gostei."</p><div class="testi-name"><div class="testi-avatar">T</div><span>Terezinha, 49 anos</span></div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="cta-center">
+      <a href="#oferta" class="btn-primary">Quero economizar</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA — ÚNICO LUGAR COM PREÇO -->
+<section class="section offer" id="oferta">
+  <div class="wrap">
+    <div class="offer-box">
+      <span class="badge">Oferta de lançamento</span>
+      <h2>Nada se Desperdiça</h2>
+      <p class="offer-sub">Fichas visuais de aproveitamento, com fotos reais, prontas para consultar no seu celular.</p>
+      <div class="price-new">R$19,90</div>
+      <p class="price-note">pagamento único via Pix · acesso imediato após a confirmação</p>
+      <a href="#" class="btn-primary" style="width:100%;" onclick="if(typeof fbq!=='undefined'){fbq('track','InitiateCheckout');}">Quero agora</a>
+      <div class="guarantee">🔒 Compra protegida · 🔁 Garantia de 7 dias</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap" style="max-width:700px;">
+    <div class="section-head"><span class="eyebrow">antes de você ir</span></div>
+    <h2 class="section-title">Perguntas frequentes</h2>
+
+    <details class="faq-item">
+      <summary>Preciso instalar algum aplicativo para usar?</summary>
+      <p>Não. É um arquivo PDF que abre direto no navegador do seu celular ou computador, sem precisar baixar nenhum aplicativo.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Como recebo o material depois de comprar?</summary>
+      <p>Assim que o pagamento é confirmado, você recebe o link de acesso na tela e também por e-mail, para abrir quando quiser.</p>
+    </details>
+    <details class="faq-item">
+      <summary>E se eu não gostar?</summary>
+      <p>Você tem 7 dias de garantia. Se não for pra você, é só pedir o reembolso, sem perguntas.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Funciona mesmo morando em apartamento pequeno?</summary>
+      <p>Sim. As dicas são pensadas para o dia a dia da cozinha, não exigem espaço, quintal ou equipamento especial.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Preciso saber cozinhar bem para aproveitar as dicas?</summary>
+      <p>Não. As fichas mostram passo a passo simples, com fotos, para qualquer pessoa entender e aplicar no mesmo dia.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Em quanto tempo eu já vejo diferença na economia?</summary>
+      <p>A maioria das pessoas já percebe diferença na primeira ida ao mercado depois de aplicar as dicas básicas.</p>
+    </details>
+    <details class="faq-item">
+      <summary>O pagamento é seguro?</summary>
+      <p>Sim. A compra é processada por uma plataforma de pagamento segura, com confirmação automática e nota de compra.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Posso ler no meu celular sem problema?</summary>
+      <p>Sim, o material foi pensado para leitura no celular, com fotos e textos curtos que facilitam a visualização na tela pequena.</p>
+    </details>
+
+    <div class="cta-center">
+      <a href="#oferta" class="btn-primary">Quero parar de gastar</a>
+    </div>
+  </div>
+</section>
+
+<!-- SELOS DE SEGURANÇA E CONFIANÇA -->
+<section class="trust-section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">pode comprar tranquila</span></div>
+    <h2 class="section-title">Sua compra é 100% protegida, do início ao fim</h2>
+
+    <div class="trust-grid">
+      <div class="trust-badge">
+        <span class="t-icon">🔒</span>
+        <h4>Ambiente seguro</h4>
+        <p>Seus dados e pagamento são processados em ambiente criptografado.</p>
+      </div>
+      <div class="trust-badge">
+        <span class="t-icon">⚡</span>
+        <h4>Acesso imediato</h4>
+        <p>Assim que o pagamento é confirmado, você já pode abrir o material.</p>
+      </div>
+      <div class="trust-badge">
+        <span class="t-icon">📱</span>
+        <h4>Leitura fácil</h4>
+        <p>Funciona direto no seu celular, sem instalar nenhum aplicativo.</p>
+      </div>
+      <div class="trust-badge">
+        <span class="t-icon">🧾</span>
+        <h4>Nota de compra</h4>
+        <p>Você recebe a confirmação da compra por e-mail na hora.</p>
+      </div>
+      <div class="trust-badge">
+        <span class="t-icon">🙋‍♀️</span>
+        <h4>Suporte disponível</h4>
+        <p>Qualquer dúvida sobre o acesso, você tem canal de atendimento.</p>
+      </div>
+      <div class="trust-badge">
+        <span class="t-icon">✅</span>
+        <h4>Satisfação garantida</h4>
+        <p>Se não fizer sentido pra você, seu dinheiro volta, sem burocracia.</p>
+      </div>
+    </div>
+
+    <div class="trust-guarantee">
+      <span class="g-icon">🔁</span>
+      <div>
+        <h4>Garantia incondicional de 7 dias</h4>
+        <p>Se por qualquer motivo você achar que o material não é pra você, é só pedir o reembolso dentro de 7 dias — sem perguntas, sem enrolação.</p>
+      </div>
+    </div>
+
+    <div class="trust-pay">
+      <span>💳 Pix</span>
+      <span>💳 Cartão de crédito</span>
+      <span>🔐 Compra criptografada</span>
+      <span>🏷️ Sem assinatura, sem mensalidade</span>
+    </div>
+  </div>
+</section>
+
+<!-- TEXTO LEGAL (único conteúdo antes do rodapé) -->
+<section class="legal-strip">
+  <div class="wrap">
+    <p>Depoimentos ilustrativos de perfis de clientes reais do público-alvo.</p>
+    <p>Este produto é 100% digital. Não nos responsabilizamos por resultados financeiros específicos, que variam conforme os hábitos de consumo de cada família. Este site não tem relação com o Facebook/Meta.</p>
+    <p>nutriprotocol.app/nadasedesperdica</p>
+  </div>
+</section>
+
+</body>
+</html>
