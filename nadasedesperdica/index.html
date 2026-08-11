@@ -667,5 +667,24 @@ src="https://www.facebook.com/tr?id=1365618965672716&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ===== REPASSE DE UTM/FBCLID PARA OS LINKS DE COMPRA ===== -->
+<script>
+(function(){
+  var currentParams = new URLSearchParams(window.location.search);
+  if ([...currentParams].length === 0) return; // sem parâmetros na URL, nada a fazer
+
+  var links = document.querySelectorAll('a.btn-primary[href*="pay.kiwify.com.br"]');
+  links.forEach(function(a){
+    try {
+      var url = new URL(a.href);
+      currentParams.forEach(function(value, key){
+        url.searchParams.set(key, value);
+      });
+      a.href = url.toString();
+    } catch(e) { /* se der erro, mantém o link original, sem quebrar a página */ }
+  });
+})();
+</script>
+
 </body>
 </html>
