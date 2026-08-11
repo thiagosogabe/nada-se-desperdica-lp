@@ -150,6 +150,14 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   .photo-1{ width:64%; top:0; left:10%; z-index:2; transform: rotate(-3deg); }
   .photo-2{ width:46%; bottom:0; right:0; z-index:3; transform: rotate(5deg); }
   .photo-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .icon-panel{
+    width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+    font-size: 64px; letter-spacing: 6px;
+  }
+  .icon-panel.bg-pine{ background: var(--pine); }
+  .icon-panel.bg-sage{ background: var(--sage); }
+  .icon-panel.bg-mustard{ background: var(--mustard); }
+  .icon-panel.bg-paper{ background: var(--paper-dark); }
   .tape{
     position:absolute; width:90px; height:28px;
     background: rgba(216,164,56,0.55);
@@ -377,10 +385,10 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     <div class="hero-photo-stack">
       <div class="tape"></div>
       <div class="photo-card photo-1">
-        <img src="https://loremflickr.com/700/500/vegetables,kitchen?lock=21" alt="Vegetais frescos sobre uma tábua de madeira na cozinha">
+        <div class="icon-panel bg-pine">🥦🥕🍅</div>
       </div>
       <div class="photo-card photo-2">
-        <img src="https://loremflickr.com/500/400/vegetables,fresh?lock=58" alt="Vegetais frescos coloridos sobre a bancada da cozinha">
+        <img src="/img/hero-2.jpg" alt="Textura da casca de abacaxi usada em receitas de aproveitamento">
       </div>
     </div>
   </div>
@@ -444,9 +452,9 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
       <span class="card-eyebrow">Ficha #04</span>
       <h4>🧅 Cebola</h4>
       <div class="card-photo-row">
-        <div class="ph"><img src="https://loremflickr.com/200/150/onion?lock=31" alt="Cebola inteira"></div>
-        <div class="ph"><img src="https://loremflickr.com/200/150/onion,skin?lock=32" alt="Casca de cebola"></div>
-        <div class="ph"><img src="https://loremflickr.com/200/150/soup,broth?lock=33" alt="Caldo caseiro pronto"></div>
+        <div class="ph"><img src="/img/onion-prep.jpg" alt="Cebola fatiada na panela"></div>
+        <div class="ph"><img src="/img/onion-peel.jpg" alt="Casca de cebola sendo colocada na panela para o caldo"></div>
+        <div class="ph"><img src="/img/onion-broth.jpg" alt="Caldo caseiro de cebola pronto, servido na tigela"></div>
       </div>
       <div class="card-line"><span class="bullet">●</span> Você joga fora: a casca externa e a raiz</div>
       <div class="card-line"><span class="bullet">●</span> Novo uso: a casca vira caldo caseiro saboroso</div>
@@ -476,19 +484,19 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     <h2 class="section-title">Alimentos que você já compra toda semana — e agora vai aproveitar 100%</h2>
     <div class="modules">
       <div class="module-card">
-        <div class="ph"><img src="https://loremflickr.com/400/260/vegetables?lock=41" alt="Legumes variados"></div>
+        <div class="ph"><div class="icon-panel bg-pine" style="font-size:44px;">🥦🥕</div></div>
         <div class="mc-body"><span class="mc-num">01</span><h4>Vegetais e legumes do dia a dia</h4></div>
       </div>
       <div class="module-card">
-        <div class="ph"><img src="https://loremflickr.com/400/260/fruit?lock=42" alt="Frutas frescas"></div>
+        <div class="ph"><div class="icon-panel bg-mustard" style="font-size:44px;">🍎🍌</div></div>
         <div class="mc-body"><span class="mc-num">02</span><h4>Frutas e suas cascas</h4></div>
       </div>
       <div class="module-card">
-        <div class="ph"><img src="https://loremflickr.com/400/260/bread,grains?lock=43" alt="Pão e grãos"></div>
+        <div class="ph"><div class="icon-panel bg-sage" style="font-size:44px;">🍞🌾</div></div>
         <div class="mc-body"><span class="mc-num">03</span><h4>Pães, arroz e grãos que sobram</h4></div>
       </div>
       <div class="module-card">
-        <div class="ph"><img src="https://loremflickr.com/400/260/herbs?lock=44" alt="Ervas e temperos"></div>
+        <div class="ph"><div class="icon-panel bg-paper" style="font-size:44px;">🌿🧄</div></div>
         <div class="mc-body"><span class="mc-num">04</span><h4>Ervas, talos e temperos</h4></div>
       </div>
     </div>
