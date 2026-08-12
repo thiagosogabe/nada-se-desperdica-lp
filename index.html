@@ -667,6 +667,24 @@ src="https://www.facebook.com/tr?id=1365618965672716&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ===== VIEWCONTENT AO ROLAR A PÁGINA (dispara 1x, na primeira rolagem significativa) ===== -->
+<script>
+(function(){
+  var fired = false;
+  function onScroll(){
+    if (fired) return;
+    if (window.scrollY > 150) {
+      fired = true;
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'ViewContent');
+      }
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
 <!-- ===== REPASSE DE UTM/FBCLID PARA OS LINKS DE COMPRA ===== -->
 <script>
 (function(){
